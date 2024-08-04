@@ -1,16 +1,15 @@
 # Cripto-Tool
 
-**Cripto-Tool** is a simple terminal utility designed for encrypting and decrypting text. It provides an easy-to-use interface for basic cryptographic operations. Whether you need to secure sensitive information or just want to explore encryption techniques, Cripto-Tool is here to help.
+**Cripto-Tool** é uma utilidade simples de terminal projetada para criptografar e descriptografar texto. Oferece uma interface fácil de usar para operações criptográficas básicas.
 
-## Features
-- Encrypt and decrypt text with ease
-- Simple command-line interface
-- Supports multiple encryption algorithms (e.g., AES, RSA)
-- Lightweight and efficient
+## Funcionalidades
+- Criptografe e descriptografe texto com facilidade
+- Interface de linha de comando simples
+- Suporta múltiplos algoritmos de criptografia
+- Leve e eficiente
 
+## Contribuindo
+Contribuições são bem-vindas! Se você deseja adicionar recursos, corrigir erros ou melhorar a documentação, por favor, abra um problema ou envie um pull request.
 
-## Contributing
-Contributions are welcome! If you'd like to add features, fix bugs, or improve documentation, please open an issue or submit a pull request.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
