@@ -1,6 +1,7 @@
 # Cabal build artifacts
 dist/
 dist-newstyle/
+
 *.cabal.project.local
 
 # GHC build artifacts
