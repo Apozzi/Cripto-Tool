@@ -5,11 +5,13 @@ import System.IO
 import Data.Char
 import Data.Bits
 import Data.List
+import qualified Data.ByteString.Lazy as LB
 import qualified Data.ByteString.Char8 as BC
 import qualified Data.ByteString.Base64 as B64
-import qualified Crypto.Hash as Hash
 import qualified Data.ByteString.Lazy as BL
-import qualified Data.Hex as Hex
+import qualified Data.ByteString.Base16 as Hex
+import Crypto.Hash
+import Data.ByteArray (convert)
 
 main :: IO ()
 main = do
@@ -39,8 +41,6 @@ processOperation op text = return $ case op of
     "caesar-encrypt" -> caesarCipher 3 text
     "caesar-decrypt" -> caesarCipher (-3) text
     "rot13" -> rot13 text
-    "md5" -> md5 text
-    "sha256" -> sha256 text
     "encode-hex" -> encodeHex text
     "decode-hex" -> decodeHex text
     _ -> "Operação inválida."
@@ -61,13 +61,6 @@ toBinary n = reverse $ go n
 fromBinary :: String -> Int
 fromBinary = foldl (\acc x -> acc * 2 + digitToInt x) 0
 
-encodeBase64 :: String -> String
-encodeBase64 = BC.unpack . B64.encode . BC.pack
-
-decodeBase64 :: String -> String
-decodeBase64 text = case B64.decode $ BC.pack text of
-    Left err -> "Erro na decodificação: " ++ err
-    Right bs -> BC.unpack bs
 
 caesarCipher :: Int -> String -> String
 caesarCipher shift = map (shiftChar shift)
@@ -80,16 +73,21 @@ caesarCipher shift = map (shiftChar shift)
 rot13 :: String -> String
 rot13 = caesarCipher 13
 
-md5 :: String -> String
-md5 = show . Hash.hash . BC.pack
-
-sha256 :: String -> String
-sha256 = show . (Hash.hash :: BC.ByteString -> Hash.Digest Hash.SHA256) . BC.pack
-
+-- Função para codificar uma String em hexadecimal
 encodeHex :: String -> String
-encodeHex = Hex.hex . BC.pack
+encodeHex = BC.unpack . Hex.encode . BC.pack
 
+-- Função para decodificar uma String hexadecimal em texto
 decodeHex :: String -> String
-decodeHex hexString = case Hex.unhex $ BC.pack hexString of
+decodeHex hexString = case Hex.decode (BC.pack hexString) of
     Right bs -> BC.unpack bs
-    Left err -> "Erro na decodificação hex: " ++ err
+    Left err -> "Erro na decodificação hex: " ++ show err
+
+
+encodeBase64 :: String -> String
+encodeBase64 = BC.unpack . B64.encode . BC.pack
+
+decodeBase64 :: String -> String
+decodeBase64 text = case B64.decode $ BC.pack text of
+    Left err -> "Erro na decodificação: " ++ err
+    Right bs -> BC.unpack bs
