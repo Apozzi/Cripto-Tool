@@ -73,11 +73,9 @@ caesarCipher shift = map (shiftChar shift)
 rot13 :: String -> String
 rot13 = caesarCipher 13
 
--- Função para codificar uma String em hexadecimal
 encodeHex :: String -> String
 encodeHex = BC.unpack . Hex.encode . BC.pack
 
--- Função para decodificar uma String hexadecimal em texto
 decodeHex :: String -> String
 decodeHex hexString = case Hex.decode (BC.pack hexString) of
     Right bs -> BC.unpack bs
