@@ -11,7 +11,6 @@
 ## Como instalar?
 
 Para Windows dentro da pasta installer terá o executavel ```cripto-tool-setup.exe``` basta rodar que ele concluirá a instalação.
-
 Caso não for possivel concluir a instalação da forma convencional basta adicionar diretório que contem .exe dentro da pasta PATH.
 
 ## Contribuindo
