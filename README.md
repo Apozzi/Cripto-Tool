@@ -1,4 +1,4 @@
-# cripto-tool
+# Cripto-Tool
 
 **cripto-tool** é uma utilidade simples de terminal projetada para criptografar e descriptografar texto. Oferece uma interface fácil de usar para operações criptográficas básicas.
 
