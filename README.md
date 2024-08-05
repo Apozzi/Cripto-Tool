@@ -28,6 +28,8 @@ Caso não for possivel concluir a instalação da forma convencional basta adici
 - encode-hex
 - decode-hex
 
+Usar parametro ```-o nome_do_arquivo.txt``` para gerar um arquivo com resultado da operação, e utilizar ```-i``` para leitura de um arquivo ao invés de um texto diretamente no terminal.
+
 
 ## Contribuindo
 Contribuições são bem-vindas! Se você deseja adicionar recursos, corrigir erros ou melhorar a documentação, por favor, abra um problema ou envie um pull request.
