@@ -1,6 +1,6 @@
 # Cripto-Tool
 
-**Cripto-Tool** é uma utilidade simples de terminal projetada para criptografar e descriptografar texto. Oferece uma interface fácil de usar para operações criptográficas básicas.
+**cripto-tool** é uma utilidade simples de terminal projetada para criptografar e descriptografar texto. Oferece uma interface fácil de usar para operações criptográficas básicas.
 
 ## Funcionalidades
 - Criptografe e descriptografe texto com facilidade
