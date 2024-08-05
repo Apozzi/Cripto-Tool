@@ -5,7 +5,7 @@
 ![Animação](https://github.com/user-attachments/assets/fafd8ff2-750a-4719-bdab-7087b0792684)
 
 
-## Funcionalidades
+## Pontos positivos
 - Criptografe e descriptografe texto com facilidade
 - Interface de linha de comando simples
 - Suporta múltiplos algoritmos de criptografia
