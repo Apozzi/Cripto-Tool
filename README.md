@@ -27,8 +27,20 @@ Caso não for possivel concluir a instalação da forma convencional basta adici
 - rot13
 - encode-hex
 - decode-hex
+- encode-MD5
+- encode-MD4
+- encode-MD2
+- encode-SHA256
+- encode-SHA512
+- aes-encrypt
+- aes-decrypt
+- des-encrypt
+- des-decrypt
+- xor-encrypt
+- xor-decrypt
 
 Usar parametro ```-o nome_do_arquivo.txt``` para gerar um arquivo com resultado da operação, e utilizar ```-i``` para leitura de um arquivo ao invés de um texto diretamente no terminal.
+Também parametro ```-k chave_de_criptografia``` deve ser utilizado para algoritmos que usam chave, caso não fornecido se utiliza "" como chave.
 
 
 ## Contribuindo
